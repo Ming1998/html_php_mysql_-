@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+   <html>
+   <!--这个html比较简单，需要注意两点，1、<input>标签的name属性的值是关键 2、form表单的method属性要是post-->
+   <head>
+    <meta charset="UTF-8">
+    <title>城市意见箱</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+   </head>
+
+    <body>
+        <div class="container">
+            <h1></h1>
+            <h3>Your suggestions are welcomed!</h3>
+
+        <form method="post" action="suggestHandler.php">
+            
+         <div class="form-group">
+            <label class="col-form-label" for="name">姓名 Name:</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="your name here" required>
+         </div>
+         <div class="form-group">
+             <label class="col-form-label" for="age">年龄 Age:</label>
+             <input type="text" class="form-control" name="age" id="age" placeholder="your age here" required>
+         </div>
+         
+        <div class="form-group">
+              性别 Gender:
+            <div class="form-check">
+                 <label class="form-check-label">
+
+                 <input class="form-check-input" type="radio" name="sex" id="female" value="女Female" checked required>
+                  女 Female
+                 </label>
+            </div>
+        
+            <div class="form-check">
+              <label class="form-check-label">
+             <input class="form-check-input" type="radio" name="sex" id="male" value="男Male" required>
+              男 Male
+              </label>
+            </div>
+        </div>
+
+
+        <label class="col-form-label" for="area">建议领域 area：</label>
+        <select name="area" class="form-control">
+            <option>市政建设</option>
+            <option>交通状况</option>
+            <option>生活水平</option>
+            <option>文艺活动</option>
+        </select>
+        <div class="form-group">
+              <label for="comments">建议 Comments:</label>
+              <textarea class="form-control" name="comments" id="comments" rows="3"></textarea>
+        </div>
+
+  
+<input class="btn btn-primary" type="submit" value="提交">
+
+<input class="btn btn-danger" type="reset" value="重置">
+
+
+</form>
+
+</div>
+
+    </body>
+
+</html>
