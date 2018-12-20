@@ -35,16 +35,16 @@ $result = mysqli_query($sql_connection, $query);//这一步是在获取数据库
 
 echo '<ul class="list-group">';
 while($row = mysqli_fetch_array($result)){//whlie循环遍历每一条数据，并将其中符合$query的信息打印
-	$name = $row['name'];
-	$age = $row['age'];
+    $name = $row['name'];
+    $age = $row['age'];
     $sex = $row['sex'];
     $area = $row['area'];
     $comments = $row['comments'];
-	echo '<li class="list-group-item">';
-	echo '姓名:<strong class="text-muted"> '. $name. '</strong> <br>';
+    echo '<li class="list-group-item">';
+    echo '姓名:<strong class="text-muted"> '. $name. '</strong> <br>';
     echo '年龄:<strong class="text-muted"> '. $age. '</strong> <br>';
     echo '性别:<strong class="text-muted"> '.$sex . '</strong><br>';
-	echo '领域:<strong class="text-muted"> '. $area . '</strong> <br>';
+    echo '领域:<strong class="text-muted"> '. $area . '</strong> <br>';
     echo '建议:<strong class="text-muted"> '. $comments . '</strong> <br>';
 	echo '</li>';
 
